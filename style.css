@@ -1,0 +1,320 @@
+:root {
+    --bgColor: rgba(36,36,36,255);
+    --boxColor: rgba(45,45,45,255);
+    --itemsColor: rgba(50,50,50,255);
+    --inputColor: rgba(56,56,56,255);
+    --buttonColor: rgba(138,138,138,255);
+    --textColor: rgba(179,179,179,255);
+    --fontColor: rgba(103,103,103,255);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--boxColor);
+    border-radius: 10px;
+}
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background: var(--bgColor);
+    font-family: "Poppins", sans-serif;
+}
+
+.mainBox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.burgerMenu {
+    width: 18%;
+    height: 100%;
+    display: block;
+    background: var(--boxColor);
+}
+
+.burgerNav {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.burgerNav img {
+    width: 20%;
+    height: 70%;
+    margin: 0 0 0 2%;
+}
+
+.burgerNav h1 {
+    font-weight: 500;
+    margin: 0 0 0 5%;
+    background: -webkit-linear-gradient(rgb(218, 52, 218), rgb(134, 33, 134), rgba(134, 33, 134, 0.241));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.burgerBoxes {
+    width: 100%;
+    height: 40%;
+}
+
+.burgerBoxes:nth-child(3) {
+    padding: 10% 0 0 0;
+}
+
+.burgerBoxes:nth-child(4) {
+    padding: 0 0 0 10%;
+}
+
+.categoryList {
+    color: var(--fontColor);
+    list-style-type: none;
+}
+
+.categoryList li {
+    margin-bottom: 5%;
+    font-size: 1rem;
+}
+
+.categoryList li:hover {
+    color: var(--textColor);
+}
+
+.burgerBoxes h1 {
+    color: var(--fontColor);
+    font-weight: normal;
+    font-size: 1.8rem;
+    margin-bottom: 5%;
+}
+
+.burgerBtns {
+    width: 100%;
+    height: 15%;
+    margin-bottom: 1%;
+    padding: 0 0 0 8%;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    color: var(--textColor);
+    gap: 7%;
+}
+
+.burgerBtns:hover {
+    background: var(--buttonColor);
+    color: black;
+}
+
+.burgerMenu > .burgerBoxes:has(button) {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.burgerMenu button {
+    width: 70%;
+    height: 50%;
+    border-radius: 10px;
+    background: var(--buttonColor);
+    font-size: 1rem;
+    font-weight: bold;
+    outline: none;
+    border: none;
+}
+
+.contentBox {
+    width: 82%;
+    height: 100%;
+    display: block;
+}
+
+.navbar {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0 0 0 12%;
+    gap: 2%;
+}
+
+.navbarItems:nth-child(1) {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+}
+
+.navbarItems:nth-child(2) {
+    padding: 0 0 0 60%;
+}
+
+.navbarItems:nth-child(4){
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navbarItems > input {
+    background: var(--inputColor);
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 50%;
+    border-radius: 10px;
+    padding: 0 0 0 2%;
+    font-size: 1rem;
+    color: var(--textColor);
+}
+
+.navbarItems:has(i) {
+    color: var(--textColor);
+    font-size: 1.4rem;
+}
+
+.navbarItems > img {
+    width: 43%;
+    height: 60%;
+    border-radius: 100px;
+}
+
+.shopArea {
+    width: 100%;
+    height: 90%;
+    display: block;
+    place-items: center;
+    overflow: hidden;
+}
+
+.adBox {
+    width: 75%;
+    height: 40%;
+    border-radius: 8px;
+    margin-bottom: 3%;
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(rgba(77,24,101,255), rgba(197,3,235,255));
+}
+
+.adLeft {
+    width: 50%;
+    height: 100%;
+}
+
+.adLeft h1 {
+    color: var(--textColor);
+    font-weight: normal;
+}
+
+.adRight {
+    width: 50%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.adRight img {
+    width: 70%;
+    height: 100%;
+    animation: imgAnimation 3s infinite;
+}
+
+.orientedTrack {
+    width: 85%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 3%;
+}
+
+.orientedTop {
+    width: 100%;
+    height: 60%;
+    color: var(--fontColor);
+}
+
+.orientedBottom {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: column;
+    list-style-type: none;
+    gap: 1%;
+}
+
+.orintedItems {
+    width: 9%;
+    height: 100%;
+    border-radius: 100px;
+    display: grid;
+    place-items: center;
+}
+
+.orientedBottom li:not(:first-of-type) {
+    background: none;
+    border: 2px solid var(--fontColor);
+    color: var(--textColor);
+}
+
+.orientedBottom li:nth-child(4) {
+    border:2px solid rgba(62,30,69,255);
+}
+
+.orientedBottom li:is(:first-of-type) {
+    color: var(--textColor);
+    background: linear-gradient(rgba(77,24,101,255), rgba(197,3,235,255));
+}
+
+.orientedBottom li:not(:first-of-type):hover {
+    background: var(--fontColor);
+    color: var(--textColor);
+}
+
+.orientedBottom li:nth-child(4):hover {
+    background: rgba(62,30,69,255);
+}
+
+.productsArea {
+    width: 100%;
+    height: 50%;
+    padding: 0 5% 0 5%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3%;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+}
+
+.productsItems {
+    width: 22%;
+    height: 60%;
+    background: var(--itemsColor);
+}
+
+@keyframes imgAnimation {
+    0% {
+        margin: 0 0 0 0;
+    } 50% {
+        margin: -7% 0 0 0;
+    } 100% {
+        margin: 0 0 0 0;
+    }
+}
